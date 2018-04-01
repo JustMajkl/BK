@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive meta tag -->
+
+	<link rel="stylesheet" type="text/css" href="{$basePath}/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="{$basePath}/css/custom.css">
+
+	<title>{ifset title}{include title|stripHtml}{/ifset} | BK Přelouč</title>
+</head>
+
+<body>
+<div class="main container">
+<nav class="nav pt-3 pb-3">
+	<a class="nav-item mx-1 btn btn-outline-light" n:href="Homepage:">Aktuality</a>
+	<a class="nav-item mx-1 btn btn-outline-light" n:href="Team:">Týmy</a>
+	<a class="nav-item mx-1 btn btn-outline-light" n:href="Season:">Sezóny</a>
+	<a class="nav-item mx-1 btn btn-outline-light" n:href="Photo:">Fotky</a>
+	<a class="nav-item mx-1 btn btn-outline-light" n:href="Contact:">Kontakt</a>
+</nav>
+
+<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+	{include content}
+
+	{block scripts}
+	{/block}
+</div>
+</body>
+</html>
