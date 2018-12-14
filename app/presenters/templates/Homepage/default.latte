@@ -1,4 +1,68 @@
-{block content}
-    <h1 n:block="title">Aktuality</h1>
+{block submenu}
+	{include '../postsubmenu.latte'}
 {/block}
+{block content}
+	<h1 n:block="title">Aktuality{ifset $category->popis} > {$category->popis}{/ifset}</h1>
+	{foreach $posts as $post}
+		<div class="container bg-dark p-2 my-3">
+			<h2><a n:href="Homepage:zobraz $post->id_clanek">
+				{$post->nadpis|striptags}</a>
+				{if !$category}
+					({$post->ref('c_sekce', 'id_sekce')->popis})
+					{dump $post->ref('c_sekce', 'id_sekce')}
+					{/if}
+			</h2>
+			<sup>
+				{$post->datum|date: '%d.%m.%Y %H:%I'}&nbsp;
+				<a n:href="uprav $post->id_clanek" n:if="$user->loggedIn">Upravit</a>&nbsp;
+				<a href="#" n:if="$user->loggedIn" data-toggle="modal" data-target="#exampleModal">Smazat</a>
+
+			</sup>
+			{*<p>{$post->clanek|noescape|truncate: 100}</p>*}
+		</div>
+
+
+	{/foreach}
+
+	<div class="pagination justify-content-center">
+		{if !$paginator->isFirst()}
+		<a n:href="default, $presenter->getRequest()->getParameter('id_category'), 1">První</a>
+		&nbsp;|&nbsp;
+		<a n:href="default, $presenter->getRequest()->getParameter('id_category'), $paginator->page-1">Předchozí</a>
+		&nbsp;|&nbsp;
+		{/if}
+
+		Stránka {$paginator->page} z {$paginator->pageCount}
+
+		{if !$paginator->isLast()}
+		&nbsp;|&nbsp;
+		<a n:href="default, $presenter->getRequest()->getParameter('id_category'), $paginator->page+1">Další</a>
+		&nbsp;|&nbsp;
+		<a n:href="default, $presenter->getRequest()->getParameter('id_category'), $paginator->pageCount">Poslední</a>
+		{/if}
+		{dump $presenter->getRequest()->getParameter('id_category')}
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Smazání příspěvku</h5>
+					<button type="button" class="close " data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+{/block}
+
 

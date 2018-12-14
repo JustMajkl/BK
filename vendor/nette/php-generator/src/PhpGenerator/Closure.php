@@ -41,17 +41,21 @@ final class Closure
 		foreach ($this->uses as $param) {
 			$uses[] = ($param->isReference() ? '&' : '') . '$' . $param->getName();
 		}
+		$useStr = strlen($tmp = implode(', ', $uses)) > Helpers::WRAP_LENGTH && count($uses) > 1
+			? "\n\t" . implode(",\n\t", $uses) . "\n"
+			: $tmp;
+
 		return 'function '
 			. ($this->returnReference ? '&' : '')
 			. $this->parametersToString()
-			. ($this->uses ? ' use (' . implode(', ', $uses) . ')' : '')
+			. ($uses ? " use ($useStr)" : '')
 			. $this->returnTypeToString()
-			. " {\n" . Nette\Utils\Strings::indent(ltrim(rtrim($this->body) . "\n"), 1) . '}';
+			. " {\n" . Nette\Utils\Strings::indent(ltrim(rtrim($this->body) . "\n")) . '}';
 	}
 
 
 	/**
-	 * @param  Parameter[]
+	 * @param  Parameter[]  $uses
 	 * @return static
 	 */
 	public function setUses(array $uses): self
@@ -68,7 +72,7 @@ final class Closure
 	}
 
 
-	public function addUse($name): Parameter
+	public function addUse(string $name): Parameter
 	{
 		return $this->uses[] = new Parameter($name);
 	}

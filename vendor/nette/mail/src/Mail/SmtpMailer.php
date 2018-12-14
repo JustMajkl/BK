@@ -135,7 +135,7 @@ class SmtpMailer implements IMailer
 			$errno, $error, $this->timeout, STREAM_CLIENT_CONNECT, $this->context
 		);
 		if (!$this->connection) {
-			throw new SmtpException($error, $errno);
+			throw new SmtpException($error ?: error_get_last()['message'], $errno);
 		}
 		stream_set_timeout($this->connection, $this->timeout, 0);
 		$this->read(); // greeting
@@ -196,7 +196,7 @@ class SmtpMailer implements IMailer
 		if ($expectedCode) {
 			$response = $this->read();
 			if (!in_array((int) $response, (array) $expectedCode, true)) {
-				throw new SmtpException('SMTP server did not accept ' . ($message ? $message : $line) . ' with error: ' . trim($response));
+				throw new SmtpException('SMTP server did not accept ' . ($message ?: $line) . ' with error: ' . trim($response));
 			}
 		}
 	}

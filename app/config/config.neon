@@ -13,6 +13,10 @@ session:
 
 services:
 	router: App\RouterFactory::createRouter
+	- app\model\PostManager
+	- app\model\TeamManager
+	- app\model\SeasonManager
+	- app\model\StatisticsManager
 
 security:
   users:

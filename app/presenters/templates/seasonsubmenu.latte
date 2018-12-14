@@ -1,0 +1,6 @@
+<nav class="nav pt-3 pb-3">
+	<a class="nav-item mx-1 mb-1 btn btn-sm btn-outline-light {ifCurrent Season:rozlosovani} active{/ifCurrent}" n:href="Season:rozlosovani">Rozlosování</a>
+	{foreach $sezony as $sezonaMenu}
+		<a class="nav-item mx-1 mb-1 btn btn-sm btn-outline-light {ifCurrent Season: $sezonaMenu->id_sezona} active{/ifCurrent}" n:href="Season: $sezonaMenu->id_sezona">{$sezonaMenu->nazev}</a>
+	{/foreach}
+</nav>

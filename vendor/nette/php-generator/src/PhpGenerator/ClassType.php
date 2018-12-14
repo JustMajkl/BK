@@ -51,7 +51,7 @@ final class ClassType
 	/** @var string[] */
 	private $implements = [];
 
-	/** @var string[] */
+	/** @var array[] */
 	private $traits = [];
 
 	/** @var Constant[] name => Constant */
@@ -65,7 +65,7 @@ final class ClassType
 
 
 	/**
-	 * @param  string|object
+	 * @param  string|object  $class
 	 * @return static
 	 */
 	public static function from($class): self
@@ -88,9 +88,11 @@ final class ClassType
 
 	public function __toString(): string
 	{
+		$resolver = $this->namespace ? [$this->namespace, 'unresolveName'] : function ($s) { return $s; };
+
 		$traits = [];
 		foreach ($this->traits as $trait => $resolutions) {
-			$traits[] = 'use ' . ($this->namespace ? $this->namespace->unresolveName($trait) : $trait)
+			$traits[] = 'use ' . $resolver($trait)
 				. ($resolutions ? " {\n\t" . implode(";\n\t", $resolutions) . ";\n}" : ';');
 		}
 
@@ -109,23 +111,19 @@ final class ClassType
 				. ';';
 		}
 
-		$mapper = function (array $arr) {
-			return $this->namespace ? array_map([$this->namespace, 'unresolveName'], $arr) : $arr;
-		};
-
 		return Strings::normalize(
 			Helpers::formatDocComment($this->comment . "\n")
 			. ($this->abstract ? 'abstract ' : '')
 			. ($this->final ? 'final ' : '')
 			. ($this->name ? "$this->type $this->name " : '')
-			. ($this->extends ? 'extends ' . implode(', ', $mapper((array) $this->extends)) . ' ' : '')
-			. ($this->implements ? 'implements ' . implode(', ', $mapper($this->implements)) . ' ' : '')
+			. ($this->extends ? 'extends ' . implode(', ', array_map($resolver, (array) $this->extends)) . ' ' : '')
+			. ($this->implements ? 'implements ' . implode(', ', array_map($resolver, $this->implements)) . ' ' : '')
 			. ($this->name ? "\n" : '') . "{\n"
 			. Strings::indent(
-				($this->traits ? implode("\n", $traits) . "\n\n" : '')
-				. ($this->consts ? implode("\n", $consts) . "\n\n" : '')
-				. ($this->properties ? implode("\n\n", $properties) . "\n\n\n" : '')
-				. ($this->methods ? implode("\n\n\n", $this->methods) . "\n" : ''), 1)
+				($traits ? implode("\n", $traits) . "\n\n" : '')
+				. ($consts ? implode("\n", $consts) . "\n\n" : '')
+				. ($properties ? implode("\n\n", $properties) . "\n\n\n" : '')
+				. ($this->methods ? implode("\n\n\n", $this->methods) . "\n" : ''))
 			. '}'
 		) . ($this->name ? "\n" : '');
 	}
@@ -141,7 +139,7 @@ final class ClassType
 
 
 	/**
-	 * @param  string|null
+	 * @param  string|null  $name
 	 * @return static
 	 */
 	public function setName($name): self
@@ -215,7 +213,7 @@ final class ClassType
 
 
 	/**
-	 * @param  string|string[]
+	 * @param  string|string[]  $names
 	 * @return static
 	 */
 	public function setExtends($names): self
@@ -251,7 +249,7 @@ final class ClassType
 
 
 	/**
-	 * @param  string[]
+	 * @param  string[]  $names
 	 * @return static
 	 */
 	public function setImplements(array $names): self
@@ -283,7 +281,7 @@ final class ClassType
 
 
 	/**
-	 * @param  string[]
+	 * @param  string[]  $names
 	 * @return static
 	 */
 	public function setTraits(array $names): self
@@ -348,7 +346,7 @@ final class ClassType
 
 
 	/**
-	 * @param  Constant[]|mixed[]
+	 * @param  Constant[]|mixed[]  $consts
 	 * @return static
 	 */
 	public function setConstants(array $consts): self
@@ -378,7 +376,7 @@ final class ClassType
 
 
 	/**
-	 * @param  Property[]
+	 * @param  Property[]  $props
 	 * @return static
 	 */
 	public function setProperties(array $props): self
@@ -403,7 +401,7 @@ final class ClassType
 	}
 
 
-	public function getProperty($name): Property
+	public function getProperty(string $name): Property
 	{
 		if (!isset($this->properties[$name])) {
 			throw new Nette\InvalidArgumentException("Property '$name' not found.");
@@ -413,7 +411,7 @@ final class ClassType
 
 
 	/**
-	 * @param  string  without $
+	 * @param  string  $name  without $
 	 */
 	public function addProperty(string $name, $value = null): Property
 	{
@@ -422,7 +420,7 @@ final class ClassType
 
 
 	/**
-	 * @param  Method[]
+	 * @param  Method[]  $methods
 	 * @return static
 	 */
 	public function setMethods(array $methods): self
@@ -447,7 +445,7 @@ final class ClassType
 	}
 
 
-	public function getMethod($name): Method
+	public function getMethod(string $name): Method
 	{
 		if (!isset($this->methods[$name])) {
 			throw new Nette\InvalidArgumentException("Method '$name' not found.");

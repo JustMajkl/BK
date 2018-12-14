@@ -7,24 +7,39 @@
 	<link rel="stylesheet" type="text/css" href="{$basePath}/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="{$basePath}/css/custom.css">
 
+	<script type="text/javascript" src="{$basePath}/js/jquery.js"></script>
+	<script type="text/javascript" src="{$basePath}/js/bootstrap.bundle.js"></script>
+
 	<title>{ifset title}{include title|stripHtml}{/ifset} | BK Přelouč</title>
+
 </head>
 
 <body>
-<div class="main container">
-<nav class="nav pt-3 pb-3">
-	<a class="nav-item mx-1 btn btn-outline-light" n:href="Homepage:">Aktuality</a>
-	<a class="nav-item mx-1 btn btn-outline-light" n:href="Team:">Týmy</a>
-	<a class="nav-item mx-1 btn btn-outline-light" n:href="Season:">Sezóny</a>
-	<a class="nav-item mx-1 btn btn-outline-light" n:href="Photo:">Fotky</a>
-	<a class="nav-item mx-1 btn btn-outline-light" n:href="Contact:">Kontakt</a>
-</nav>
 
-<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+{include adminmenu.latte}
 
+
+<div class="main container pb-3 mb-3">
+
+	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type, alert, alert-info">{$flash->message}</div>
+
+	<nav class="nav pt-3 pb-3">
+		<a class="nav-item mx-1 btn btn-lg btn-outline-light {ifCurrent Homepage:*} active{/ifCurrent}" n:href="Homepage:">Aktuality</a>
+		<a class="nav-item mx-1 btn btn-lg btn-outline-light {ifCurrent Team:*} active{/ifCurrent}" n:href="Team:">Týmy</a>
+		<a class="nav-item mx-1 btn btn-lg btn-outline-light {ifCurrent Season:*} active{/ifCurrent}" n:href="Season:">Sezóny</a>
+		<a class="nav-item mx-1 btn btn-lg btn-outline-light {ifCurrent Photo:*} active{/ifCurrent} disabled" n:href="Photo:">Fotky</a>
+		<a class="nav-item mx-1 btn btn-lg btn-outline-light {ifCurrent Contact:*} active{/ifCurrent}" n:href="Contact:">Kontakt</a>
+	</nav>
+
+	{include submenu}
 	{include content}
 
 	{block scripts}
+		<script>
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip()
+			})
+		</script>
 	{/block}
 </div>
 </body>

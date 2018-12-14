@@ -1,0 +1,9 @@
+<nav class="nav pt-3 pb-3">
+	{foreach $sekce as $sekceMenu}
+		{if $sekceMenu->id_sekce != 22} {* pro možnost 'neznámé' *}
+			<a n:class="nav-item,mx-1,mb-1,btn,btn-sm,btn-outline-light,$presenter->isLinkCurrent('Homepage:', $sekceMenu->id_sekce) ? active" n:href="Homepage: $sekceMenu->id_sekce">{$sekceMenu->popis}</a>
+		{/if}
+	{/foreach}
+</nav>
+
+{*{ifCurrent Homepage: $sekceMenu->id_sekce} active{/ifCurrent}*}

@@ -21,9 +21,11 @@ final class Helpers
 
 	const PHP_IDENT = '[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*';
 
-	const MAX_DEPTH = 50;
+	const WRAP_LENGTH = 100;
 
-	const WRAP_LENGTH = 70;
+	const INDENT_LENGTH = 4;
+
+	const MAX_DEPTH = 50;
 
 
 	/**
@@ -83,7 +85,7 @@ final class Helpers
 
 			} else {
 				$out = '';
-				$outAlt = "\n$space";
+				$outWrapped = "\n$space";
 				$var[$marker] = true;
 				$counter = 0;
 				foreach ($var as $k => &$v) {
@@ -91,12 +93,13 @@ final class Helpers
 						$item = ($k === $counter ? '' : self::_dump($k, $level + 1) . ' => ') . self::_dump($v, $level + 1);
 						$counter = is_int($k) ? max($k + 1, $counter) : $counter;
 						$out .= ($out === '' ? '' : ', ') . $item;
-						$outAlt .= "\t$item,\n$space";
+						$outWrapped .= "\t$item,\n$space";
 					}
 				}
 				unset($var[$marker]);
 			}
-			return '[' . (strpos($out, "\n") === false && strlen($out) < self::WRAP_LENGTH ? $out : $outAlt) . ']';
+			$wrap = strpos($out, "\n") !== false || strlen($out) > self::WRAP_LENGTH - $level * self::INDENT_LENGTH;
+			return '[' . ($wrap ? $outWrapped : $out) . ']';
 
 		} elseif ($var instanceof \Serializable) {
 			$var = serialize($var);
@@ -180,11 +183,14 @@ final class Helpers
 				if (!is_array($arg)) {
 					throw new Nette\InvalidArgumentException('Argument must be an array.');
 				}
-				$sep = '';
+				$items = [];
 				foreach ($arg as $tmp) {
-					$res .= $sep . self::dump($tmp);
-					$sep = strlen($res) - strrpos($res, "\n") > self::WRAP_LENGTH ? ",\n\t" : ', ';
+					$items[] = self::dump($tmp);
 				}
+				$res .= strlen($tmp = implode(', ', $items)) > self::WRAP_LENGTH && count($items) > 1
+					? "\n" . Nette\Utils\Strings::indent(implode(",\n", $items)) . "\n"
+					: $tmp;
+
 			} else { // $  ->  ::
 				$res .= substr($token, 0, -1) . self::formatMember(array_shift($args));
 			}
@@ -257,5 +263,11 @@ final class Helpers
 	public static function extractShortName(string $name): string
 	{
 		return ($pos = strrpos($name, '\\')) === false ? $name : substr($name, $pos + 1);
+	}
+
+
+	public static function tabsToSpaces(string $s, int $count = self::INDENT_LENGTH): string
+	{
+		return str_replace("\t", str_repeat(' ', $count), $s);
 	}
 }

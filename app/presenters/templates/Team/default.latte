@@ -1,4 +1,59 @@
+{block submenu}
+	{include '../teamsubmenu.latte'}
+{/block}
+{* SUMMARY
+	0 - počet trenérů
+	1 - seznam trenérů
+	2 - počet hráčů
+	3 - průměrná výška
+	4 - největší hráč
+	5 - nejmenší hráč
+*}
 {block content}
-	<h1 n:block="title">Týmy</h1>
+	<h1 n:block="title">Týmy{ifset $tym->nazev} > {$tym->nazev}{/ifset}</h1>
+	{if (!isset($hraci))}
+		<h2>Shrnutí:</h2>
+		<b>Počet trenérů:</b>
+		{$summary[0]}
+		<p>Jmenovitě:
+		{foreach $summary[1] as $trainer}
+			{* tag {sep} = for every except the last item *}
+			{$trainer->jmeno} {$trainer->prijmeni}{sep}, {/sep}
+		{/foreach}
+			<br>
+			<b>Počet hráčů: </b>
+			{$summary[2]}
+			<br>
+			<b>Průměrná výška: </b>
+			{$summary[3]|number:2} cm
+			<br>
+			<br>
+			Nejvyšší hráč je {$summary[4]->jmeno} {$summary[4]->prijmeni} měřící {$summary[4]->vyska}.
+			<br>
+			Nejnižší hráč je {$summary[5]->jmeno} {$summary[5]->prijmeni} měřící {$summary[5]->vyska}.
+			<br>
+			<p>Pozn.: Všechny hodnoty jsou vygenerované z databáze a nemusejí přesně odpovídat realitě.</p>
+	{else}
+		<table class="table table-dark table-striped">
+			<thead class="thead-dark">
+				<th>Foto</th>
+				<th>Jméno</th>
+				<th>Narozen</th>
+				<th>Výška</th>
+				<th>Post</th>
+			</thead>
+			<tbody>
+			{foreach $hraci as $hrac}
+				<tr>
+					<td></td>
+					<td>{$hrac->jmeno} {$hrac->prijmeni}</td>
+					<td>{$hrac->rocnik}</td>
+					<td>{$hrac->vyska}</td>
+					<td>{$hrac->post}</td>
+				</tr>
+			{/foreach}
+			</tbody>
+		</table>
+	{/if}
 {/block}
 

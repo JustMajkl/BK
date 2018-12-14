@@ -1,0 +1,51 @@
+<div class="btn-group-vertical position-fixed mt-5">
+	{if !$user->loggedIn}
+		<a n:href="Sign:in">
+			<button type="button" class="btn btn-light admin-gateway admin-gateway-login" data-toggle="tooltip" data-placement="top" data-offset="0" title="Přihlásit se">
+				<img src="{$basePath}/images/icon-key-small.png" class="img-fluid">
+			</button>
+		</a>
+	{else}
+		<a n:href="Sign:out">
+			<button type="button" class="btn btn-light admin-gateway" data-toggle="tooltip" data-placement="top" data-offset="0" title="Odhlásit se">
+				<img src="{$basePath}/images/icon-cross-small.png" class="img-fluid">
+			</button>
+		</a>
+
+		<a n:href="Homepage:vytvor">
+			<button type="button" class="btn btn-light admin-gateway" data-toggle="tooltip" data-placement="top" data-offset="0" title="Vytvořit článek">
+				<img src="{$basePath}/images/icon-pencil-small.png" class="img-fluid">
+			</button>
+		</a>
+
+		<a n:href="Team:vytvorHrace">
+			<button type="button" class="btn btn-light admin-gateway" data-toggle="tooltip" data-placement="top" data-offset="0" title="Přidat hráče/trenéra">
+				<img src="{$basePath}/images/icon-user-small.png" class="img-fluid">
+			</button>
+		</a>
+
+		<a n:href="Team:vytvorTym">
+			<button type="button" class="btn btn-light admin-gateway" data-toggle="tooltip" data-placement="top" data-offset="0" title="Přidat tým">
+				<img src="{$basePath}/images/icon-usergroup-small.png" class="img-fluid">
+			</button>
+		</a>
+
+		<a n:href="Season:pridejRozlosovani">
+			<button type="button" class="btn btn-light admin-gateway" data-toggle="tooltip" data-placement="top" data-offset="0" title="Přidat rozlosování">
+				<img src="{$basePath}/images/icon-calendar-small.png" class="img-fluid">
+			</button>
+		</a>
+
+		<a n:href="Season:pridejStatistiky">
+			<button type="button" class="btn btn-light admin-gateway" data-toggle="tooltip" data-placement="top" data-offset="0" title="Přidat statistiky">
+				<img src="{$basePath}/images/icon-bars-small.png" class="img-fluid">
+			</button>
+		</a>
+
+		<a n:href="Photo:pridej">
+			<button type="button" class="btn btn-light admin-gateway" data-toggle="tooltip" data-placement="top" data-offset="0" title="Přidat fotku/galerii">
+				<img src="{$basePath}/images/icon-picture-small.png" class="img-fluid">
+			</button>
+		</a>
+	{/if}
+</div>

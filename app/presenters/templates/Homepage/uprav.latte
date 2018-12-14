@@ -1,0 +1,9 @@
+{block submenu}
+	{include '../postsubmenu.latte'}
+{/block}
+{block content}
+	<h1 n:block="title">Novinky</h1>
+	<h2>Editace: {$post->nadpis}</h2>
+	<p class="text-justify">{$post->clanek|noescape}</p>
+{/block}
+

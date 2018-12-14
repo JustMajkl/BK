@@ -1,0 +1,7 @@
+<nav class="nav pt-3 pb-3">
+	{foreach $tymy as $tymMenu}
+		{if $tymMenu->id_tym != 22} {* pro možnost 'žádný tým' *}
+			<a class="nav-item mx-1 mb-1 btn btn-sm btn-outline-light {ifCurrent Team: $tymMenu->id_tym} active{/ifCurrent}" n:href="Team: $tymMenu->id_tym">{$tymMenu->nazev}</a>
+		{/if}
+	{/foreach}
+</nav>

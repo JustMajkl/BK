@@ -1,4 +1,333 @@
+{block submenu}
+	{include '../seasonsubmenu.latte'}
+{/block}
 {block content}
-	<h1 n:block="title">Sezóny</h1>
+	<h1 n:block="title">Sezóny{ifset $sezona->nazev} > {$sezona->nazev}{/ifset}</h1>
+	{ifset $statistiky}
+
+		{*	TOP HRACI PODLE ODEHRANYCH ZAPASU	*}
+		{foreach $statistiky['odehrano'] as $odehranych}
+			{first}
+				<table class="table table-dark table-striped table-sm">
+				<thead>
+				<tr>
+					<th>
+						Jméno
+					</th>
+					<th>
+						Příjmení
+					</th>
+					<th>
+						Odehraných zápasů
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+			{/first}
+			<tr>
+				<td class="td-40">
+					{$odehranych->ref('t_hraci', 'id_hrac')->jmeno}
+				</td>
+				<td class="td-40">
+					{$odehranych->ref('t_hraci', 'id_hrac')->prijmeni}
+				</td>
+				<td class="td-20">
+					{$odehranych->odehranych}
+				</td>
+			</tr>
+			{last}
+				</tbody>
+				</table>
+			{/last}
+		{/foreach}
+
+		{*	TOP HRACI PODLE CELKOVYCH BODU	*}
+		{foreach $statistiky['body'] as $body}
+			{first}
+				<table class="table table-dark table-striped table-sm">
+				<thead>
+				<tr>
+					<th>
+						Jméno
+					</th>
+					<th>
+						Příjmení
+					</th>
+					<th>
+						Počet bodů
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+			{/first}
+			<tr>
+				<td class="td-40">
+					{$body->ref('t_hraci', 'id_hrac')->jmeno}
+				</td>
+				<td class="td-40">
+					{$body->ref('t_hraci', 'id_hrac')->prijmeni}
+				</td>
+				<td class="td-20">
+					{$body->body_celkem}
+				</td>
+			</tr>
+			{last}
+				</tbody>
+				</table>
+			{/last}
+		{/foreach}
+
+		{*	TOP HRACI PODLE PRUMERU BODU NA ZAPAS	*}
+		{foreach $statistiky['body'] as $body}
+			{first}
+				<table class="table table-dark table-striped table-sm">
+				<thead>
+				<tr>
+					<th>
+						Jméno
+					</th>
+					<th>
+						Příjmení
+					</th>
+					<th>
+						Průměr bodů
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+			{/first}
+			<tr>
+				<td class="td-40">
+					{$body->ref('t_hraci', 'id_hrac')->jmeno}
+				</td>
+				<td class="td-40">
+					{$body->ref('t_hraci', 'id_hrac')->prijmeni}
+				</td>
+				<td class="td-20">
+					{$body->body_celkem/$body->odehranych|number:1}
+				</td>
+			</tr>
+			{last}
+				</tbody>
+				</table>
+			{/last}
+		{/foreach}
+
+		{*	TOP HRACI PODLE POCTU VYSTRELENYCH TROJEK	*}
+		{foreach $statistiky['trojky_strelba'] as $trojky}
+			{first}
+				<table class="table table-dark table-striped table-sm">
+				<thead>
+				<tr>
+					<th>
+						Jméno
+					</th>
+					<th>
+						Příjmení
+					</th>
+					<th>
+						Vystřelené trojky
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+			{/first}
+			<tr>
+				<td class="td-40">
+					{$trojky->ref('t_hraci', 'id_hrac')->jmeno}
+				</td>
+				<td class="td-40">
+					{$trojky->ref('t_hraci', 'id_hrac')->prijmeni}
+				</td>
+				<td class="td-20">
+					{$trojky->trojky_dane}
+				</td>
+			</tr>
+			{last}
+				</tbody>
+				</table>
+			{/last}
+		{/foreach}
+
+		{*	TOP HRACI PODLE POCTU DANYCH TROJEK	*}
+		{foreach $statistiky['trojky_dane'] as $trojky}
+			{first}
+				<table class="table table-dark table-striped table-sm">
+				<thead>
+				<tr>
+					<th>
+						Jméno
+					</th>
+					<th>
+						Příjmení
+					</th>
+					<th>
+						Dané trojky
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+			{/first}
+			<tr>
+				<td class="td-40">
+					{$trojky->ref('t_hraci', 'id_hrac')->jmeno}
+				</td>
+				<td class="td-40">
+					{$trojky->ref('t_hraci', 'id_hrac')->prijmeni}
+				</td>
+				<td class="td-20">
+					{$trojky->trojky_dane}
+				</td>
+			</tr>
+			{last}
+				</tbody>
+				</table>
+			{/last}
+		{/foreach}
+
+		{*	TOP HRACI PODLE POCTU DANYCH VYSTRELENYCH SESTEK	*}
+		{foreach $statistiky['sestky_strelba'] as $sestky}
+			{first}
+				<table class="table table-dark table-striped table-sm">
+				<thead>
+				<tr>
+					<th>
+						Jméno
+					</th>
+					<th>
+						Příjmení
+					</th>
+					<th>
+						Vystřelené šestky
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+			{/first}
+			<tr>
+				<td class="td-40">
+					{$sestky->ref('t_hraci', 'id_hrac')->jmeno}
+				</td>
+				<td class="td-40">
+					{$sestky->ref('t_hraci', 'id_hrac')->prijmeni}
+				</td>
+				<td class="td-20">
+					{$sestky->sestky_strelba}
+				</td>
+			</tr>
+			{last}
+				</tbody>
+				</table>
+			{/last}
+		{/foreach}
+
+		{*	TOP HRACI PODLE POCTU DANYCH SESTEK	*}
+		{foreach $statistiky['sestky_dane'] as $sestky}
+			{first}
+				<table class="table table-dark table-striped table-sm">
+				<thead>
+				<tr>
+					<th>
+						Jméno
+					</th>
+					<th>
+						Příjmení
+					</th>
+					<th>
+						Průměr bodů
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+			{/first}
+			<tr>
+				<td class="td-40">
+					{$sestky->ref('t_hraci', 'id_hrac')->jmeno}
+				</td>
+				<td class="td-40">
+					{$sestky->ref('t_hraci', 'id_hrac')->prijmeni}
+				</td>
+				<td class="td-20">
+					{$sestky->sestky_dane}
+				</td>
+			</tr>
+			{last}
+				</tbody>
+				</table>
+			{/last}
+		{/foreach}
+
+		{*	TOP HRACI PODLE POCTU FAULU	*}
+		{foreach $statistiky['fauly'] as $fauly}
+			{first}
+				<table class="table table-dark table-striped table-sm">
+				<thead>
+				<tr>
+					<th>
+						Jméno
+					</th>
+					<th>
+						Příjmení
+					</th>
+					<th>
+						Průměr bodů
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+			{/first}
+			<tr>
+				<td class="td-40">
+					{$fauly->ref('t_hraci', 'id_hrac')->jmeno}
+				</td>
+				<td class="td-40">
+					{$fauly->ref('t_hraci', 'id_hrac')->prijmeni}
+				</td>
+				<td class="td-20">
+					{$fauly->fauly_celkem}
+				</td>
+			</tr>
+			{last}
+				</tbody>
+				</table>
+			{/last}
+		{/foreach}
+
+		{*	TOP HRACI PODLE POCTU FAULU NA ZAPAS	*}
+		{foreach $statistiky['fauly'] as $fauly}
+			{first}
+				<table class="table table-dark table-striped table-sm">
+				<thead>
+				<tr>
+					<th>
+						Jméno
+					</th>
+					<th>
+						Příjmení
+					</th>
+					<th>
+						Průměr bodů
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+			{/first}
+			<tr>
+				<td class="td-40">
+					{$fauly->ref('t_hraci', 'id_hrac')->jmeno}
+				</td>
+				<td class="td-40">
+					{$fauly->ref('t_hraci', 'id_hrac')->prijmeni}
+				</td>
+				<td class="td-20">
+					{$fauly->fauly_celkem/$fauly->odehranych|number:1}
+				</td>
+			</tr>
+			{last}
+				</tbody>
+				</table>
+			{/last}
+		{/foreach}
+	{/ifset}
 {/block}
 

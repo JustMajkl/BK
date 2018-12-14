@@ -8,6 +8,8 @@
             <path value="file://$PROJECT_DIR$/www" />
             <path value="file://$PROJECT_DIR$/www/css" />
             <path value="file://$PROJECT_DIR$/www/js" />
+            <path value="file://$PROJECT_DIR$/www/images" />
+            <path value="file://$PROJECT_DIR$/www/quill" />
           </resourceRoots>
         </entryData>
       </entry>

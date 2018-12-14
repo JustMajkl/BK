@@ -1,0 +1,36 @@
+{block submenu}
+	{include '../seasonsubmenu.latte'}
+{/block}
+{block content}
+	<h1 n:block="title">Rozlosování</h1>
+	{ifCurrent Season:rozlosovani}
+		<h2>Nejbližší zápasy:</h2>
+		{if count($nextMatches) > 0}
+			{foreach $nextMatches as $match}
+				{first}
+					<table class="table table-dark table-striped">
+					<thead class="thead-dark">
+					<th>Kdo</th>
+					<th>S kým</th>
+					<th>Kde</th>
+					<th>Kdy</th>
+					</thead>
+					<tbody>
+				{/first}
+				<tr>
+					<td>{$match->ref('t_tymy', 'id_tym')->nazev}</td>
+					<td>{$match->tym}</td>
+					<td>{$match->kde|replace:'0', 'doma'|replace: '1', 'venku'}</td>
+					<td>{$match->kdy|date: '%d.%m.%Y'}</td>
+				</tr>
+				{last}
+					</tbody>
+					</table>
+				{/last}
+			{/foreach}
+		{else}
+			<p>Nenalezeny žádné další zápasy.</p>
+		{/if}
+	{/ifCurrent}
+{/block}
+

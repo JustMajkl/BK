@@ -39,6 +39,7 @@ final class Method
 
 
 	/**
+	 * @param  string|array  $method
 	 * @return static
 	 */
 	public static function from($method): self
@@ -71,16 +72,19 @@ final class Method
 			. 'function '
 			. ($this->returnReference ? '&' : '')
 			. $this->name
-			. $this->parametersToString()
+			. ($params = $this->parametersToString())
 			. $this->returnTypeToString()
 			. ($this->abstract || $this->body === null
 				? ';'
-				: "\n{\n" . Nette\Utils\Strings::indent(ltrim(rtrim($this->body) . "\n"), 1) . '}');
+				: (strpos($params, "\n") === false ? "\n" : ' ')
+					. "{\n"
+					. Nette\Utils\Strings::indent(ltrim(rtrim($this->body) . "\n"))
+					. '}');
 	}
 
 
 	/**
-	 * @param  string|null
+	 * @param  string|null  $code
 	 * @return static
 	 */
 	public function setBody($code, array $args = null): self
@@ -89,7 +93,7 @@ final class Method
 			$code = null;
 			trigger_error(__METHOD__ . '() use null instead of false', E_USER_DEPRECATED);
 		}
-		$this->body = $args === null ? $code : Helpers::formatArgs($code, $args);
+		$this->body = $args === null || $code === null ? $code : Helpers::formatArgs($code, $args);
 		return $this;
 	}
 

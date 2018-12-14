@@ -3,6 +3,8 @@ namespace App\Presenters;
 
 use Nette;
 use Nette\Application\UI\Form;
+use app\model\PostManager;
+use app\model\TeamManager;
 
 
 class PostPresenter extends Nette\Application\UI\Presenter
@@ -10,9 +12,11 @@ class PostPresenter extends Nette\Application\UI\Presenter
     /** @var Nette\Database\Context */
     private $database;
 
-    public function __construct(Nette\Database\Context $database)
+    public function __construct(Nette\Database\Context $database, PostManager $postManager, TeamManager $teamManager)
     {
         $this->database = $database;
+        /*$this->postManager = $postManager;
+        $this->teamManager = $teamManager;*/
     }
 
     public function renderShow($postId)
