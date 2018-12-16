@@ -71,16 +71,17 @@ class PostManager
 			->get($id_post);
 	}
 
-	//	KATEGORIE
-	public function getCategoryById($id_category)
-	{
-		return $this->database->table('c_sekce')
-			->get($id_category);
-	}
+	public function createPost($redaktorId, $values) {
+		$row = $this->database->table('c_clanek_new')
+			->insert([
+				'id_redaktor' => '106',
+				'id_sekce' => $values->sekce,
+				'nadpis' => $values->nadpis,
+				'clanek' => $values->clanek_input,
+				'publikovat' => $values->publikovat
+			]);
 
-	public function getCategories()
-	{
-		return $this->database->table('c_sekce');
+		return $row->getPrimary();
 	}
 
 	public function editPost($id, $array) {
@@ -93,5 +94,17 @@ class PostManager
 		$this->database->table('c_clanek_new')
 			->get($id_post)
 			->delete();
+	}
+
+	//	KATEGORIE
+	public function getCategoryById($id_category)
+	{
+		return $this->database->table('c_sekce')
+			->get($id_category);
+	}
+
+	public function getCategories()
+	{
+		return $this->database->table('c_sekce');
 	}
 }

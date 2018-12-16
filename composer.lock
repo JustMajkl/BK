@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "daf89a53f0ae41c23aa7bdd7e07df137",
+    "content-hash": "41b764f32fbc4ddd154d7a14562afee2",
     "packages": [
         {
             "name": "components/jquery",
@@ -1385,6 +1385,44 @@
                 "web"
             ],
             "time": "2018-07-24T15:54:34+00:00"
+        },
+        {
+            "name": "vrana/adminer",
+            "version": "v4.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vrana/adminer.git",
+                "reference": "85e6f2ac9e20c13412a0ca7a797bf4bd660a8732"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vrana/adminer/zipball/85e6f2ac9e20c13412a0ca7a797bf4bd660a8732",
+                "reference": "85e6f2ac9e20c13412a0ca7a797bf4bd660a8732",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "plugins/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0",
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Vrána",
+                    "homepage": "https://www.vrana.cz/"
+                }
+            ],
+            "description": "Database management in a single PHP file.",
+            "homepage": "https://www.adminer.org/",
+            "keywords": [
+                "database"
+            ],
+            "time": "2018-11-24T13:13:01+00:00"
         }
     ],
     "packages-dev": [

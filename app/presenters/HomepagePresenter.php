@@ -4,6 +4,8 @@ namespace App\Presenters;
 
 use Nette;
 use app\model\PostManager;
+use Nette\Application\UI\Form;
+use Nette\Forms\Controls;
 
 
 class HomepagePresenter extends Nette\Application\UI\Presenter
@@ -73,6 +75,40 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 		$this->userCheck();
 
 		$this->template->sekce = $this->postManager->getCategories();
+	}
+
+	public function createComponentPostForm()
+	{
+		$form = new Form;	// UI\Form instance
+
+		$form->addText('nadpis', 'Název článku:')
+			->setAttribute('autocomplete', 'off')
+			->setRequired();
+
+		$form->addSelect('sekce', 'Sekce:', $this->postManager->getCategories()->fetchAssoc('id_sekce=popis'))
+			->setRequired();
+
+		$form->addCheckbox('publikovat', 'Publikovat?');
+
+		$form->addHidden('clanek_input');
+
+		$form->addTextArea('clanek', 'Text:');
+
+		$form->addSubmit('send', 'Vytvořit článek');
+
+		$form->onSuccess[] = [$this, 'postFormSucceeded'];
+
+		return $form;
+	}
+
+	public function postFormSucceeded(Form $form, \stdClass $values)
+	{
+		$redaktorId = $this->getUser()->getId();
+
+		$postId = $this->postManager->createPost($redaktorId, $values);
+
+		$this->flashMessage('Článek byl úspěšně vytvořen.', 'success');
+		$this->redirect('zobraz', $postId);
 	}
 
 	public function actionUprav($id)

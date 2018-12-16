@@ -13,15 +13,15 @@
       <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="4" parent="1" name="mysql">
-      <Collation>utf8_czech_ci</Collation>
+      <Collation>latin1_swedish_ci</Collation>
     </schema>
-    <schema id="5" parent="1" name="nette">
-      <Collation>utf8_czech_ci</Collation>
-    </schema>
-    <schema id="6" parent="1" name="performance_schema">
+    <schema id="5" parent="1" name="performance_schema">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="7" parent="1" name="phpmyadmin">
+    <schema id="6" parent="1" name="phpmyadmin">
+      <Collation>utf8_bin</Collation>
+    </schema>
+    <schema id="7" parent="1" name="quickstart">
       <Collation>utf8_bin</Collation>
     </schema>
     <schema id="8" parent="1" name="test">
@@ -966,1508 +966,658 @@
     <table id="243" parent="2" name="c_clanek_new">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="244" parent="2" name="c_clanky">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="245" parent="2" name="c_clanky_zaloha">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="246" parent="2" name="c_opravneni">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="247" parent="2" name="c_redaktori">
+    <table id="244" parent="2" name="c_redaktori">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="248" parent="2" name="c_sekce">
+    <table id="245" parent="2" name="c_sekce">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="249" parent="2" name="clanky04_05">
+    <table id="246" parent="2" name="f_fotky">
       <Engine>MyISAM</Engine>
       <Collation>latin2_czech_cs</Collation>
     </table>
-    <table id="250" parent="2" name="d_body">
+    <table id="247" parent="2" name="f_galerie">
       <Engine>MyISAM</Engine>
       <Collation>latin2_czech_cs</Collation>
     </table>
-    <table id="251" parent="2" name="d_doporucujeme">
+    <table id="248" parent="2" name="f_sekce">
       <Engine>MyISAM</Engine>
       <Collation>latin2_czech_cs</Collation>
     </table>
-    <table id="252" parent="2" name="d_header">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="253" parent="2" name="f_fotky">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="254" parent="2" name="f_galerie">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="255" parent="2" name="f_sekce">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="256" parent="2" name="log">
+    <table id="249" parent="2" name="log">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="257" parent="2" name="muzi97">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="258" parent="2" name="r_rozlosovani">
+    <table id="250" parent="2" name="r_rozlosovani">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="259" parent="2" name="s_rekordy">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="260" parent="2" name="s_sezona00">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="261" parent="2" name="s_sezona01">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="262" parent="2" name="s_sezona02">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="263" parent="2" name="s_sezona03">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="264" parent="2" name="s_sezona04">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="265" parent="2" name="s_sezona05">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="266" parent="2" name="s_sezona06">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="267" parent="2" name="s_sezona07">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="268" parent="2" name="s_sezona08">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="269" parent="2" name="s_sezona09">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="270" parent="2" name="s_sezona10">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="271" parent="2" name="s_sezona11">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="272" parent="2" name="s_sezona99">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="273" parent="2" name="s_sezony">
+    <table id="251" parent="2" name="s_sezony">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="274" parent="2" name="souperi">
+    <table id="252" parent="2" name="souperi">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="275" parent="2" name="statistiky">
+    <table id="253" parent="2" name="statistiky">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="276" parent="2" name="t_hraci">
+    <table id="254" parent="2" name="t_hraci">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="277" parent="2" name="t_treneri">
+    <table id="255" parent="2" name="t_treneri">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="278" parent="2" name="t_tymy">
+    <table id="256" parent="2" name="t_tymy">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="279" parent="2" name="tnastaveni">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="280" parent="2" name="z_00_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="281" parent="2" name="z_01_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="282" parent="2" name="z_01_2">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="283" parent="2" name="z_01_3">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="284" parent="2" name="z_02_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="285" parent="2" name="z_02_2">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="286" parent="2" name="z_02_3">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="287" parent="2" name="z_02_4">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="288" parent="2" name="z_02_5">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="289" parent="2" name="z_03_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="290" parent="2" name="z_03_2">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="291" parent="2" name="z_04_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="292" parent="2" name="z_04_2">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="293" parent="2" name="z_05_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="294" parent="2" name="z_05_2">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="295" parent="2" name="z_05_3">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="296" parent="2" name="z_05_4">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="297" parent="2" name="z_06_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="298" parent="2" name="z_07_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="299" parent="2" name="z_07_2">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="300" parent="2" name="z_07_3">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="301" parent="2" name="z_07_4">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="302" parent="2" name="z_07_5">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="303" parent="2" name="z_08_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="304" parent="2" name="z_08_2">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="305" parent="2" name="z_08_3">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="306" parent="2" name="z_08_4">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="307" parent="2" name="z_08_5">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="308" parent="2" name="z_08_6">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="309" parent="2" name="z_08_7">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="310" parent="2" name="z_09_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="311" parent="2" name="z_09_2">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="312" parent="2" name="z_09_3">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="313" parent="2" name="z_09_4">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="314" parent="2" name="z_09_5">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="315" parent="2" name="z_10_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="316" parent="2" name="z_10_2">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="317" parent="2" name="z_10_3">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="318" parent="2" name="z_10_4">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="319" parent="2" name="z_10_5">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="320" parent="2" name="z_11_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="321" parent="2" name="z_11_2">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="322" parent="2" name="z_11_3">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="323" parent="2" name="z_11_4">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="324" parent="2" name="z_11_5">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <table id="325" parent="2" name="z_99_1">
-      <Engine>MyISAM</Engine>
-      <Collation>latin2_czech_cs</Collation>
-    </table>
-    <column id="326" parent="243" name="id_clanek">
+    <column id="257" parent="243" name="id_clanek">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="243" name="id_redaktor">
+    <column id="258" parent="243" name="id_redaktor">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="243" name="id_sekce">
+    <column id="259" parent="243" name="id_sekce">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="243" name="nadpis">
+    <column id="260" parent="243" name="nadpis">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;Bez nadpisu&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="330" parent="243" name="clanek">
+    <column id="261" parent="243" name="clanek">
       <Position>5</Position>
       <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="331" parent="243" name="datum">
+    <column id="262" parent="243" name="datum">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="332" parent="243" name="publikovat">
+    <column id="263" parent="243" name="publikovat">
       <Position>7</Position>
       <DataType>smallint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="333" parent="243" name="fk_clanek_redaktori">
+    <index id="264" parent="243" name="fk_clanek_redaktori">
       <ColNames>id_redaktor</ColNames>
     </index>
-    <index id="334" parent="243" name="fk_clanek_sekce">
+    <index id="265" parent="243" name="fk_clanek_sekce">
       <ColNames>id_sekce</ColNames>
     </index>
-    <key id="335" parent="243" name="PRIMARY">
+    <key id="266" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_clanek</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="336" parent="243" name="fk_clanek_redaktori">
+    <foreign-key id="267" parent="243" name="fk_clanek_redaktori">
       <ColNames>id_redaktor</ColNames>
       <RefSchemaName>bk_prelouc</RefSchemaName>
       <RefTableName>c_redaktori</RefTableName>
       <RefColNames>id_redaktor</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="337" parent="243" name="fk_clanek_sekce">
+    <foreign-key id="268" parent="243" name="fk_clanek_sekce">
       <ColNames>id_sekce</ColNames>
       <RefSchemaName>bk_prelouc</RefSchemaName>
       <RefTableName>c_sekce</RefTableName>
       <RefColNames>id_sekce</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="338" parent="244" name="id_clanek">
+    <column id="269" parent="244" name="id_redaktor">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="339" parent="244" name="id_redaktor">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="340" parent="244" name="id_sekce">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="341" parent="244" name="nadpis">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;Bez nadpisu&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="342" parent="244" name="clanek">
-      <Position>5</Position>
-      <DataType>text|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="343" parent="244" name="datum">
-      <Position>6</Position>
-      <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="344" parent="244" name="publikovat">
-      <Position>7</Position>
-      <DataType>smallint(1)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="345" parent="244" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id_clanek</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="346" parent="245" name="id_clanek">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="347" parent="245" name="id_redaktor">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="348" parent="245" name="id_sekce">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="349" parent="245" name="nadpis">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;Bez nadpisu&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="350" parent="245" name="clanek">
-      <Position>5</Position>
-      <DataType>text|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="351" parent="245" name="datum">
-      <Position>6</Position>
-      <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="352" parent="245" name="publikovat">
-      <Position>7</Position>
-      <DataType>smallint(1)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="353" parent="245" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id_clanek</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="354" parent="246" name="id_redaktor">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="355" parent="246" name="id_sekce">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="356" parent="247" name="id_redaktor">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="357" parent="247" name="prijmeni">
+    <column id="270" parent="244" name="prijmeni">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="247" name="jmeno">
+    <column id="271" parent="244" name="jmeno">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="247" name="heslo">
+    <column id="272" parent="244" name="heslo">
       <Position>4</Position>
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="247" name="user">
+    <column id="273" parent="244" name="user">
       <Position>5</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="247" name="fotka">
+    <column id="274" parent="244" name="fotka">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="362" parent="247" name="nahled">
+    <column id="275" parent="244" name="nahled">
       <Position>7</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="363" parent="247" name="zmeny">
+    <column id="276" parent="244" name="zmeny">
       <Position>8</Position>
       <DataType>smallint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="364" parent="247" name="fotky">
+    <column id="277" parent="244" name="fotky">
       <Position>9</Position>
       <DataType>tinyint(3)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="365" parent="247" name="PRIMARY">
+    <key id="278" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_redaktor</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="366" parent="248" name="id_sekce">
+    <column id="279" parent="245" name="id_sekce">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="367" parent="248" name="popis">
+    <column id="280" parent="245" name="popis">
       <Position>2</Position>
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="368" parent="248" name="PRIMARY">
+    <key id="281" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_sekce</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="369" parent="249" name="id">
+    <column id="282" parent="246" name="id_fotky">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="370" parent="249" name="redaktor">
-      <Position>2</Position>
-      <DataType>varchar(16)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="371" parent="249" name="sekce">
-      <Position>3</Position>
-      <DataType>varchar(16)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="372" parent="249" name="nadpis">
-      <Position>4</Position>
-      <DataType>text|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="373" parent="249" name="clanek">
-      <Position>5</Position>
-      <DataType>text|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="374" parent="249" name="vytvoreno">
-      <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="375" parent="249" name="zmeneno">
-      <Position>7</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="376" parent="249" name="publikovano">
-      <Position>8</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="377" parent="249" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="378" parent="250" name="postid">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="379" parent="250" name="message">
-      <Position>2</Position>
-      <DataType>text|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="380" parent="250" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>postid</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="381" parent="251" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="382" parent="251" name="nazev">
-      <Position>2</Position>
-      <DataType>varchar(80)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="383" parent="251" name="popis">
-      <Position>3</Position>
-      <DataType>varchar(160)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="384" parent="251" name="url">
-      <Position>4</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="385" parent="251" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="386" parent="252" name="parent">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="387" parent="252" name="poster">
-      <Position>2</Position>
-      <DataType>char(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="388" parent="252" name="title">
-      <Position>3</Position>
-      <DataType>char(40)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="389" parent="252" name="children">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="390" parent="252" name="area">
-      <Position>5</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;1&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="391" parent="252" name="posted">
-      <Position>6</Position>
-      <DataType>datetime|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="392" parent="252" name="postid">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="393" parent="252" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>postid</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="394" parent="253" name="id_fotky">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="395" parent="253" name="id_redaktor">
+    <column id="283" parent="246" name="id_redaktor">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="396" parent="253" name="id_galerie">
+    <column id="284" parent="246" name="id_galerie">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="397" parent="253" name="nazev">
+    <column id="285" parent="246" name="nazev">
       <Position>4</Position>
       <DataType>varchar(40)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="398" parent="253" name="fotka">
+    <column id="286" parent="246" name="fotka">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="399" parent="253" name="nahled">
+    <column id="287" parent="246" name="nahled">
       <Position>6</Position>
       <DataType>smallint(2)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="400" parent="253" name="PRIMARY">
+    <key id="288" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_fotky</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="401" parent="254" name="id_galerie">
+    <column id="289" parent="247" name="id_galerie">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="402" parent="254" name="id_redaktor">
+    <column id="290" parent="247" name="id_redaktor">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="403" parent="254" name="id_sekce">
+    <column id="291" parent="247" name="id_sekce">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="404" parent="254" name="nazev">
+    <column id="292" parent="247" name="nazev">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="405" parent="254" name="PRIMARY">
+    <key id="293" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_galerie</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="406" parent="255" name="id_sekce">
+    <column id="294" parent="248" name="id_sekce">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="407" parent="255" name="id_redaktor">
+    <column id="295" parent="248" name="id_redaktor">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="408" parent="255" name="nazev">
+    <column id="296" parent="248" name="nazev">
       <Position>3</Position>
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;?&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="409" parent="255" name="PRIMARY">
+    <key id="297" parent="248" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_sekce</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="410" parent="256" name="id">
+    <column id="298" parent="249" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="411" parent="256" name="id_redaktor">
+    <column id="299" parent="249" name="id_redaktor">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="412" parent="256" name="akce">
+    <column id="300" parent="249" name="akce">
       <Position>3</Position>
       <DataType>tinytext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="413" parent="256" name="kdy">
+    <column id="301" parent="249" name="kdy">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="414" parent="256" name="fk_log_redaktori">
+    <index id="302" parent="249" name="fk_log_redaktori">
       <ColNames>id_redaktor</ColNames>
     </index>
-    <key id="415" parent="256" name="PRIMARY">
+    <key id="303" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="416" parent="256" name="fk_log_redaktori">
+    <foreign-key id="304" parent="249" name="fk_log_redaktori">
       <ColNames>id_redaktor</ColNames>
       <RefSchemaName>bk_prelouc</RefSchemaName>
       <RefTableName>c_redaktori</RefTableName>
       <RefColNames>id_redaktor</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="417" parent="257" name="id">
-      <Position>1</Position>
-      <DataType>char(7)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="418" parent="257" name="jmeno">
-      <Position>2</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="419" parent="257" name="poc_utk">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="420" parent="257" name="body_cel">
-      <Position>4</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="421" parent="257" name="body_prum">
-      <Position>5</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="422" parent="257" name="trojky">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="423" parent="257" name="ses_str">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="424" parent="257" name="ses_dany">
-      <Position>8</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="425" parent="257" name="ses_prum">
-      <Position>9</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="426" parent="257" name="fauly_cel">
-      <Position>10</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="427" parent="257" name="fauly_prum">
-      <Position>11</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="428" parent="258" name="id_rozlosovani">
+    <column id="305" parent="250" name="id_rozlosovani">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="429" parent="258" name="id_tym">
+    <column id="306" parent="250" name="id_tym">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="430" parent="258" name="tym">
+    <column id="307" parent="250" name="tym">
       <Position>3</Position>
       <DataType>varchar(40)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
       <Collation>latin2_czech_cs</Collation>
     </column>
-    <column id="431" parent="258" name="kde">
+    <column id="308" parent="250" name="kde">
       <Position>4</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="432" parent="258" name="kdy">
+    <column id="309" parent="250" name="kdy">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <DefaultExpression>&apos;0000-00-00&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="433" parent="258" name="fk_rozslosovani_tymy">
+    <index id="310" parent="250" name="fk_rozslosovani_tymy">
       <ColNames>id_tym</ColNames>
     </index>
-    <key id="434" parent="258" name="PRIMARY">
+    <key id="311" parent="250" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_rozlosovani</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="435" parent="258" name="fk_rozslosovani_tymy">
+    <foreign-key id="312" parent="250" name="fk_rozslosovani_tymy">
       <ColNames>id_tym</ColNames>
       <RefSchemaName>bk_prelouc</RefSchemaName>
       <RefTableName>t_tymy</RefTableName>
       <RefColNames>id_tym</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="436" parent="259" name="jmeno">
-      <Position>1</Position>
-      <DataType>varchar(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="437" parent="259" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="438" parent="259" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="439" parent="259" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="440" parent="259" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="441" parent="259" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="442" parent="259" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="443" parent="259" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="444" parent="259" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="445" parent="259" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="446" parent="259" name="sezona">
-      <Position>11</Position>
-      <DataType>varchar(60)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="447" parent="259" name="tym">
-      <Position>12</Position>
-      <DataType>varchar(60)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="448" parent="260" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="449" parent="260" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="450" parent="260" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="451" parent="261" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="452" parent="261" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="453" parent="261" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="454" parent="262" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="455" parent="262" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="456" parent="262" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="457" parent="263" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="458" parent="263" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="459" parent="263" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="460" parent="264" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="461" parent="264" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="462" parent="264" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="463" parent="265" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="464" parent="265" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="465" parent="265" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="466" parent="266" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="467" parent="266" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="468" parent="266" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="469" parent="267" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="470" parent="267" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="471" parent="267" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="472" parent="268" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="473" parent="268" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="474" parent="268" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="475" parent="269" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="476" parent="269" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="477" parent="269" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="478" parent="270" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="479" parent="270" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="480" parent="270" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="481" parent="271" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="482" parent="271" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="483" parent="271" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="484" parent="272" name="nazev">
-      <Position>1</Position>
-      <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="485" parent="272" name="poradi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="486" parent="272" name="statistika">
-      <Position>3</Position>
-      <DataType>char(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="487" parent="273" name="id_sezona">
+    <column id="313" parent="251" name="id_sezona">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="488" parent="273" name="nazev">
+    <column id="314" parent="251" name="nazev">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
       <Collation>latin2_czech_cs</Collation>
     </column>
-    <column id="489" parent="273" name="tabulka">
+    <column id="315" parent="251" name="tabulka">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
       <Collation>latin2_czech_cs</Collation>
     </column>
-    <key id="490" parent="273" name="PRIMARY">
+    <key id="316" parent="251" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_sezona</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="491" parent="274" name="id">
+    <column id="317" parent="252" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="492" parent="274" name="nazev">
+    <column id="318" parent="252" name="nazev">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="493" parent="274" name="PRIMARY">
+    <key id="319" parent="252" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="494" parent="275" name="id">
+    <column id="320" parent="253" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="495" parent="275" name="id_hrac">
+    <column id="321" parent="253" name="id_hrac">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="496" parent="275" name="id_sezona">
+    <column id="322" parent="253" name="id_sezona">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="497" parent="275" name="id_tym">
+    <column id="323" parent="253" name="id_tym">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="498" parent="275" name="body_celkem">
+    <column id="324" parent="253" name="body_celkem">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="499" parent="275" name="trojky_strelba">
+    <column id="325" parent="253" name="trojky_strelba">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="500" parent="275" name="trojky_dane">
+    <column id="326" parent="253" name="trojky_dane">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="501" parent="275" name="fauly_celkem">
+    <column id="327" parent="253" name="fauly_celkem">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="502" parent="275" name="odehranych">
+    <column id="328" parent="253" name="odehranych">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="503" parent="275" name="sestky_strelba">
+    <column id="329" parent="253" name="sestky_strelba">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="504" parent="275" name="sestky_dane">
+    <column id="330" parent="253" name="sestky_dane">
       <Position>11</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="505" parent="275" name="fk_statistiky_hraci">
+    <index id="331" parent="253" name="fk_statistiky_hraci">
       <ColNames>id_hrac</ColNames>
     </index>
-    <index id="506" parent="275" name="fk_statistiky_sezony">
+    <index id="332" parent="253" name="fk_statistiky_sezony">
       <ColNames>id_sezona</ColNames>
     </index>
-    <index id="507" parent="275" name="fk_statistiky_tymy">
+    <index id="333" parent="253" name="fk_statistiky_tymy">
       <ColNames>id_tym</ColNames>
     </index>
-    <key id="508" parent="275" name="PRIMARY">
+    <key id="334" parent="253" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="509" parent="275" name="fk_statistiky_hraci">
+    <foreign-key id="335" parent="253" name="fk_statistiky_hraci">
       <ColNames>id_hrac</ColNames>
       <RefSchemaName>bk_prelouc</RefSchemaName>
       <RefTableName>t_hraci</RefTableName>
       <RefColNames>id_hrac</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="510" parent="275" name="fk_statistiky_sezony">
+    <foreign-key id="336" parent="253" name="fk_statistiky_sezony">
       <ColNames>id_sezona</ColNames>
       <RefSchemaName>bk_prelouc</RefSchemaName>
       <RefTableName>s_sezony</RefTableName>
       <RefColNames>id_sezona</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="511" parent="275" name="fk_statistiky_tymy">
+    <foreign-key id="337" parent="253" name="fk_statistiky_tymy">
       <ColNames>id_tym</ColNames>
       <RefSchemaName>bk_prelouc</RefSchemaName>
       <RefTableName>t_tymy</RefTableName>
       <RefColNames>id_tym</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="512" parent="276" name="id_hrac">
+    <column id="338" parent="254" name="id_hrac">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="513" parent="276" name="id_tym">
+    <column id="339" parent="254" name="id_tym">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="514" parent="276" name="jmeno">
+    <column id="340" parent="254" name="jmeno">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="515" parent="276" name="prijmeni">
+    <column id="341" parent="254" name="prijmeni">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="516" parent="276" name="fotka">
+    <column id="342" parent="254" name="fotka">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="517" parent="276" name="nahled">
+    <column id="343" parent="254" name="nahled">
       <Position>6</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="518" parent="276" name="post">
+    <column id="344" parent="254" name="post">
       <Position>7</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="519" parent="276" name="rocnik">
+    <column id="345" parent="254" name="rocnik">
       <Position>8</Position>
       <DataType>varchar(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="520" parent="276" name="vyska">
+    <column id="346" parent="254" name="vyska">
       <Position>9</Position>
       <DataType>char(3)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="521" parent="276" name="fk_hraci_tymy">
+    <index id="347" parent="254" name="fk_hraci_tymy">
       <ColNames>id_tym</ColNames>
     </index>
-    <key id="522" parent="276" name="PRIMARY">
+    <key id="348" parent="254" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_hrac</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="523" parent="276" name="fk_hraci_tymy">
+    <foreign-key id="349" parent="254" name="fk_hraci_tymy">
       <ColNames>id_tym</ColNames>
       <RefSchemaName>bk_prelouc</RefSchemaName>
       <RefTableName>t_tymy</RefTableName>
       <RefColNames>id_tym</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="524" parent="277" name="id_trener">
+    <column id="350" parent="255" name="id_trener">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="525" parent="277" name="id_tym">
+    <column id="351" parent="255" name="id_tym">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="526" parent="277" name="jmeno">
+    <column id="352" parent="255" name="jmeno">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="527" parent="277" name="prijmeni">
+    <column id="353" parent="255" name="prijmeni">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="528" parent="277" name="fotka">
+    <column id="354" parent="255" name="fotka">
       <Position>5</Position>
       <DataType>varchar(60)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="529" parent="277" name="nahled">
+    <column id="355" parent="255" name="nahled">
       <Position>6</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="530" parent="277" name="fk_treneri_tymy">
+    <index id="356" parent="255" name="fk_treneri_tymy">
       <ColNames>id_tym</ColNames>
     </index>
-    <key id="531" parent="277" name="PRIMARY">
+    <key id="357" parent="255" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_trener</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="532" parent="277" name="fk_treneri_tymy">
+    <foreign-key id="358" parent="255" name="fk_treneri_tymy">
       <ColNames>id_tym</ColNames>
       <RefSchemaName>bk_prelouc</RefSchemaName>
       <RefTableName>t_tymy</RefTableName>
       <RefColNames>id_tym</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="533" parent="278" name="id_tym">
+    <column id="359" parent="256" name="id_tym">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="534" parent="278" name="nazev">
+    <column id="360" parent="256" name="nazev">
       <Position>2</Position>
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
@@ -2475,2346 +1625,10 @@
       <ColumnKind>normal</ColumnKind>
       <Collation>latin2_czech_cs</Collation>
     </column>
-    <key id="535" parent="278" name="PRIMARY">
+    <key id="361" parent="256" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_tym</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="536" parent="279" name="maxzaznamu">
-      <Position>1</Position>
-      <DataType>smallint(5) unsigned|0s</DataType>
-      <DefaultExpression>&apos;30&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="537" parent="279" name="jmeno">
-      <Position>2</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="538" parent="279" name="icq_num">
-      <Position>3</Position>
-      <DataType>varchar(12)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="539" parent="279" name="email_admin">
-      <Position>4</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="540" parent="279" name="txt_kontakt">
-      <Position>5</Position>
-      <DataType>text|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="541" parent="279" name="txt_sponzori">
-      <Position>6</Position>
-      <DataType>varchar(250)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="542" parent="279" name="txt_fotky">
-      <Position>7</Position>
-      <DataType>text|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="543" parent="280" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="544" parent="280" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="545" parent="280" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="546" parent="280" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="547" parent="280" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="548" parent="280" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="549" parent="280" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="550" parent="280" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="551" parent="280" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="552" parent="280" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="553" parent="281" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="554" parent="281" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="555" parent="281" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="556" parent="281" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="557" parent="281" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="558" parent="281" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="559" parent="281" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="560" parent="281" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="561" parent="281" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="562" parent="281" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="563" parent="282" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="564" parent="282" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="565" parent="282" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="566" parent="282" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="567" parent="282" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="568" parent="282" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="569" parent="282" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="570" parent="282" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="571" parent="282" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="572" parent="282" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="573" parent="283" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="574" parent="283" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="575" parent="283" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="576" parent="283" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="577" parent="283" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="578" parent="283" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="579" parent="283" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="580" parent="283" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="581" parent="283" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="582" parent="283" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="583" parent="284" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="584" parent="284" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="585" parent="284" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="586" parent="284" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="587" parent="284" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="588" parent="284" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="589" parent="284" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="590" parent="284" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="591" parent="284" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="592" parent="284" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="593" parent="285" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="594" parent="285" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="595" parent="285" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="596" parent="285" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="597" parent="285" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="598" parent="285" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="599" parent="285" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="600" parent="285" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="601" parent="285" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="602" parent="285" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="603" parent="286" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="604" parent="286" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="605" parent="286" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="606" parent="286" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="607" parent="286" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="608" parent="286" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="609" parent="286" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="610" parent="286" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="611" parent="286" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="612" parent="286" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="613" parent="287" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="614" parent="287" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="615" parent="287" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="616" parent="287" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="617" parent="287" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="618" parent="287" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="619" parent="287" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="620" parent="287" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="621" parent="287" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="622" parent="287" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="623" parent="288" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="624" parent="288" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="625" parent="288" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="626" parent="288" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="627" parent="288" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="628" parent="288" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="629" parent="288" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="630" parent="288" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="631" parent="288" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="632" parent="288" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="633" parent="289" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="634" parent="289" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="635" parent="289" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="636" parent="289" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="637" parent="289" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="638" parent="289" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="639" parent="289" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="640" parent="289" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="641" parent="289" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="642" parent="289" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="643" parent="290" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="644" parent="290" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="645" parent="290" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="646" parent="290" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="647" parent="290" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="648" parent="290" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="649" parent="290" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="650" parent="290" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="651" parent="290" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="652" parent="290" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="653" parent="291" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="654" parent="291" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="655" parent="291" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="656" parent="291" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="657" parent="291" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="658" parent="291" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="659" parent="291" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="660" parent="291" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="661" parent="291" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="662" parent="291" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="663" parent="292" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="664" parent="292" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="665" parent="292" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="666" parent="292" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="667" parent="292" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="668" parent="292" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="669" parent="292" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="670" parent="292" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="671" parent="292" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="672" parent="292" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="673" parent="293" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="674" parent="293" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="675" parent="293" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="676" parent="293" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="677" parent="293" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="678" parent="293" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="679" parent="293" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="680" parent="293" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="681" parent="293" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="682" parent="293" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="683" parent="294" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="684" parent="294" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="685" parent="294" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="686" parent="294" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="687" parent="294" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="688" parent="294" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="689" parent="294" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="690" parent="294" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="691" parent="294" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="692" parent="294" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="693" parent="295" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="694" parent="295" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="695" parent="295" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="696" parent="295" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="697" parent="295" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="698" parent="295" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="699" parent="295" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="700" parent="295" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="701" parent="295" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="702" parent="295" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="703" parent="296" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="704" parent="296" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="705" parent="296" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="706" parent="296" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="707" parent="296" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="708" parent="296" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="709" parent="296" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="710" parent="296" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="711" parent="296" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="712" parent="296" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="713" parent="297" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="714" parent="297" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="715" parent="297" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="716" parent="297" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="717" parent="297" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="718" parent="297" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="719" parent="297" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="720" parent="297" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="721" parent="297" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="722" parent="297" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="723" parent="298" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="724" parent="298" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="725" parent="298" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="726" parent="298" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="727" parent="298" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="728" parent="298" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="729" parent="298" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="730" parent="298" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="731" parent="298" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="732" parent="298" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="733" parent="299" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="734" parent="299" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="735" parent="299" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="736" parent="299" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="737" parent="299" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="738" parent="299" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="739" parent="299" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="740" parent="299" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="741" parent="299" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="742" parent="299" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="743" parent="300" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="744" parent="300" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="745" parent="300" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="746" parent="300" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="747" parent="300" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="748" parent="300" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="749" parent="300" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="750" parent="300" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="751" parent="300" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="752" parent="300" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="753" parent="301" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="754" parent="301" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="755" parent="301" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="756" parent="301" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="757" parent="301" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="758" parent="301" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="759" parent="301" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="760" parent="301" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="761" parent="301" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="762" parent="301" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="763" parent="302" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="764" parent="302" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="765" parent="302" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="766" parent="302" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="767" parent="302" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="768" parent="302" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="769" parent="302" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="770" parent="302" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="771" parent="302" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="772" parent="302" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="773" parent="303" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="774" parent="303" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="775" parent="303" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="776" parent="303" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="777" parent="303" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="778" parent="303" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="779" parent="303" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="780" parent="303" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="781" parent="303" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="782" parent="303" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="783" parent="304" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="784" parent="304" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="785" parent="304" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="786" parent="304" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="787" parent="304" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="788" parent="304" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="789" parent="304" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="790" parent="304" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="791" parent="304" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="792" parent="304" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="793" parent="305" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="794" parent="305" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="795" parent="305" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="796" parent="305" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="797" parent="305" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="798" parent="305" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="799" parent="305" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="800" parent="305" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="801" parent="305" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="802" parent="305" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="803" parent="306" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="804" parent="306" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="805" parent="306" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="806" parent="306" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="807" parent="306" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="808" parent="306" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="809" parent="306" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="810" parent="306" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="811" parent="306" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="812" parent="306" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="813" parent="307" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="814" parent="307" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="815" parent="307" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="816" parent="307" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="817" parent="307" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="818" parent="307" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="819" parent="307" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="820" parent="307" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="821" parent="307" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="822" parent="307" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="823" parent="308" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="824" parent="308" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="825" parent="308" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="826" parent="308" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="827" parent="308" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="828" parent="308" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="829" parent="308" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="830" parent="308" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="831" parent="308" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="832" parent="308" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="833" parent="309" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="834" parent="309" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="835" parent="309" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="836" parent="309" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="837" parent="309" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="838" parent="309" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="839" parent="309" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="840" parent="309" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="841" parent="309" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="842" parent="309" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="843" parent="310" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="844" parent="310" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="845" parent="310" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="846" parent="310" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="847" parent="310" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="848" parent="310" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="849" parent="310" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="850" parent="310" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="851" parent="310" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="852" parent="310" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="853" parent="311" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="854" parent="311" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="855" parent="311" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="856" parent="311" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="857" parent="311" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="858" parent="311" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="859" parent="311" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="860" parent="311" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="861" parent="311" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="862" parent="311" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="863" parent="312" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="864" parent="312" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="865" parent="312" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="866" parent="312" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="867" parent="312" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="868" parent="312" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="869" parent="312" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="870" parent="312" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="871" parent="312" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="872" parent="312" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="873" parent="313" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="874" parent="313" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="875" parent="313" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="876" parent="313" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="877" parent="313" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="878" parent="313" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="879" parent="313" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="880" parent="313" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="881" parent="313" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="882" parent="313" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="883" parent="314" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="884" parent="314" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="885" parent="314" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="886" parent="314" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="887" parent="314" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="888" parent="314" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="889" parent="314" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="890" parent="314" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="891" parent="314" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="892" parent="314" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="893" parent="315" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="894" parent="315" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="895" parent="315" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="896" parent="315" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="897" parent="315" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="898" parent="315" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="899" parent="315" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="900" parent="315" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="901" parent="315" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="902" parent="315" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="903" parent="316" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="904" parent="316" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="905" parent="316" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="906" parent="316" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="907" parent="316" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="908" parent="316" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="909" parent="316" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="910" parent="316" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="911" parent="316" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="912" parent="316" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="913" parent="317" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="914" parent="317" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="915" parent="317" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="916" parent="317" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="917" parent="317" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="918" parent="317" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="919" parent="317" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="920" parent="317" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="921" parent="317" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="922" parent="317" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="923" parent="318" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="924" parent="318" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="925" parent="318" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="926" parent="318" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="927" parent="318" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="928" parent="318" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="929" parent="318" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="930" parent="318" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="931" parent="318" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="932" parent="318" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="933" parent="319" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="934" parent="319" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="935" parent="319" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="936" parent="319" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="937" parent="319" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="938" parent="319" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="939" parent="319" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="940" parent="319" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="941" parent="319" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="942" parent="319" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="943" parent="320" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="944" parent="320" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="945" parent="320" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="946" parent="320" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="947" parent="320" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="948" parent="320" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="949" parent="320" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="950" parent="320" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(5,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="951" parent="320" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="952" parent="320" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="953" parent="321" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="954" parent="321" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="955" parent="321" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="956" parent="321" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="957" parent="321" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="958" parent="321" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="959" parent="321" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="960" parent="321" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(5,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="961" parent="321" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="962" parent="321" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="963" parent="322" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="964" parent="322" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="965" parent="322" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="966" parent="322" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="967" parent="322" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="968" parent="322" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="969" parent="322" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="970" parent="322" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(5,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="971" parent="322" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="972" parent="322" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="973" parent="323" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="974" parent="323" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="975" parent="323" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="976" parent="323" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="977" parent="323" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="978" parent="323" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="979" parent="323" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="980" parent="323" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(5,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="981" parent="323" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="982" parent="323" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="983" parent="324" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="984" parent="324" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="985" parent="324" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="986" parent="324" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="987" parent="324" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="988" parent="324" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="989" parent="324" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="990" parent="324" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(5,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="991" parent="324" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="992" parent="324" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(4,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="993" parent="325" name="jmeno">
-      <Position>1</Position>
-      <DataType>char(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="994" parent="325" name="poc_utk">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="995" parent="325" name="body_cel">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="996" parent="325" name="body_prum">
-      <Position>4</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="997" parent="325" name="trojky">
-      <Position>5</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="998" parent="325" name="ses_str">
-      <Position>6</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="999" parent="325" name="ses_dany">
-      <Position>7</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="1000" parent="325" name="ses_prum">
-      <Position>8</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="1001" parent="325" name="fauly_cel">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="1002" parent="325" name="fauly_prum">
-      <Position>10</Position>
-      <DataType>float(3,2 digit)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
   </database-model>
 </dataSource>
