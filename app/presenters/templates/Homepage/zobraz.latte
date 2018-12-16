@@ -3,8 +3,7 @@
 {/block}
 {block content}
 	{dump $post}
-	<h1 n:block="title">Novinky</h1>
-	<h2>{$post->nadpis}</h2>
+	<h1 n:block="title">{$post->nadpis}</h1>
 	<p class="text-justify">{$post->clanek|noescape}</p>
 {/block}
 
