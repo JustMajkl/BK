@@ -53,15 +53,31 @@ class PostManager
 		}
 	}
 
-	public function getPosts($id_category)
+	public function getAllPostsCount($id_category)
 	{
 		if(isset($id_category)) {
 			return $this->database->table('c_clanek_new')
 				->where('id_sekce = ', $id_category)
-				->order('datum DESC');
+				->order('datum DESC')
+				->count();
 		} else {
 			return $this->database->table('c_clanek_new')
-				->order('datum DESC');
+				->order('datum DESC')
+				->count();
+		}
+	}
+
+	public function getAllPosts($id_category, $limit, $offset)
+	{
+		if(isset($id_category)) {
+			return $this->database->table('c_clanek_new')
+				->where('id_sekce = ', $id_category)
+				->order('datum DESC')
+				->limit($limit, $offset);
+		} else {
+			return $this->database->table('c_clanek_new')
+				->order('datum DESC')
+				->limit($limit, $offset);
 		}
 	}
 

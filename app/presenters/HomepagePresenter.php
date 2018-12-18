@@ -20,8 +20,12 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 	//	BĚŽNÁ SEKCE
 	public  function renderDefault($id_category, $page = 1)
 	{
-		//	počet příspěvků pro účely stránkování
-		$postsCount = $this->postManager->getPublicPostsCount($id_category);
+		if($this->user->isLoggedIn())
+		{	//	počet příspěvků pro účely stránkování
+			$postsCount = $this->postManager->getAllPostsCount($id_category);
+		} else {
+			$postsCount = $this->postManager->getPublicPostsCount($id_category);
+		}
 
 		//	nastavení stránkování
 		$paginator = new Nette\Utils\Paginator;
@@ -29,8 +33,12 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 		$paginator->setItemsPerPage(10);
 		$paginator->setPage($page);
 
-		//	vyhledání příslušné články na základě stránkování
-		$this->template->posts = $this->postManager->getPublicPosts($id_category, $paginator->getLength(), $paginator->getOffset());
+		if($this->user->isLoggedIn())
+		{	//	vyhledání příslušné články na základě stránkování
+			$this->template->posts = $this->postManager->getAllPosts($id_category, $paginator->getLength(), $paginator->getOffset());
+		} else {
+			$this->template->posts = $this->postManager->getPublicPosts($id_category, $paginator->getLength(), $paginator->getOffset());
+		}
 
 		//	předání instance paginator šabloně
 		$this->template->paginator = $paginator;
@@ -104,8 +112,13 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 	public function postFormSucceeded(Form $form, \stdClass $values)
 	{
 		$redaktorId = $this->getUser()->getId();
+		$postId = $this->getParameter('postId');
 
-		$postId = $this->postManager->createPost($redaktorId, $values);
+		if(!$postId) {	// Když není v GET id článku tak vytvoříme nový
+			$postId = $this->postManager->createPost($redaktorId, $values);
+		} else {
+			$this->postManager->editPost($postId, $values);
+		}
 
 		$this->flashMessage('Článek byl úspěšně vytvořen.', 'success');
 		$this->redirect('zobraz', $postId);
@@ -119,7 +132,10 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 		if(!$post) {
 			$this->error('Příspěvek nebyl nalezen!');
 		}
-		//$this['postForm']->setDefaults($post->toArray());
+		$this['postForm']->setDefaults($post->toArray());
+		$this['postForm']['sekce']->setDefaultValue($post->id_sekce);
+		$this['postForm']['clanek_input']->setDefaultValue($post->clanek);
+
 		$this->template->post = $post;
 		$this->template->sekce = $this->postManager->getCategories();
 	}
@@ -127,6 +143,8 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 	public function actionSmaz($id)
 	{
 		$this->userCheck();
+
+		$this->postManager->deletePost($id);
 	}
 
 	//	Kontrola zda je uživatel přihlášen

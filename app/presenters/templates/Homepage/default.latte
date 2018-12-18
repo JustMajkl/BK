@@ -15,7 +15,13 @@
 			<sup>
 				{$post->datum|date: '%d.%m.%Y %H:%I'}&nbsp;
 				<a n:href="uprav $post->id_clanek" n:if="$user->loggedIn">Upravit</a>&nbsp;
-				<a href="#" n:if="$user->loggedIn" data-toggle="modal" data-target="#exampleModal">Smazat</a>
+				<a
+						n:href="uprav $post->id_clanek"
+						n:if="$user->loggedIn"
+						data-toggle="modal"
+						data-target="#exampleModal"
+						data-post-nadpis="{$post->nadpis}">
+					Smazat</a>
 
 			</sup>
 			{*<p>{$post->clanek|noescape|truncate: 100}</p>*}
@@ -54,15 +60,29 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					...
+					Opravdu chcete smazat článek
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Ne</button>
+					<button type="button" class="btn btn-danger">Smazat</button>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script>
+		$('#exampleModal').on('show.bs.modal', function(e) {
+			var modaldefault = "Opravdu chcete smazat";
+			//get data-id attribute of the clicked element
+			var postNadpis = $(e.relatedTarget).data('post-nadpis');
+			console.log(postNadpis);
+
+			//populate the textbox
+			var modal = document.querySelector('div[class=modal-body]');
+			modal.innerHTML = modaldefault + " &quot;" + postNadpis + "&quot?";
+			console.log($(e.currentTarget).find('div[class="modal-body"]').innerHTML);
+		});
+	</script>
 {/block}
 
 

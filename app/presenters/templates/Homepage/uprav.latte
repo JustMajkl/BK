@@ -2,8 +2,73 @@
 	{include '../postsubmenu.latte'}
 {/block}
 {block content}
+
 	<h1 n:block="title">Novinky</h1>
-	<h2>Editace: {$post->nadpis}</h2>
-	<p class="text-justify">{$post->clanek|noescape}</p>
+	<h2>Upravit článek</h2>
+
+	{form postForm}
+		<div class="form-group mx-auto">
+			{label nadpis /}
+			{input nadpis}
+		</div>
+		<div class="form-group mx-auto">
+			{label sekce /}
+			{input sekce}
+		</div>
+		<div class="form-group mx-auto">
+			{label publikovat /}
+			{input publikovat}
+		</div>
+		<div class="form-group mx-auto">
+			{label clanek_input /}
+			{input clanek_input}
+		</div>
+		{include '../textarea.latte'}
+		{input send}
+	{/form}
+
+	{block script}
+		<!-- Vložení Quill knihovny -->
+		<script src="{$basePath}/js/quill.js"></script>
+
+		<!-- Inicializace Quill editoru -->
+		<script type="text/javascript">
+			var quill = new Quill('#editor', {
+				modules: {
+					formula: true,
+					syntax: true,
+					toolbar: '#toolbar-container'
+				},
+				placeholder: 'Compose an epic...',
+				theme: 'snow'
+			});
+
+			var form = document.querySelector('form');
+			var clanek = document.querySelector('input[name=clanek_input]');
+			var textarea = quill.container.firstChild;
+			form.onsubmit = function () {
+				// hodit obsah DIV do hidden inputu
+				clanek.value = JSON.stringify(textarea.innerHTML);
+				clanek.value = clanek.value.substring(1, clanek.value.length-1);
+
+				console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+				console.log(clanek.value);
+				//form.submit();
+			}
+
+			function edit() {
+				textarea.innerHTML = clanek.value;
+			}
+
+			if (clanek.value != null)
+				edit();
+
+			function dumpec() {
+				console.log(textarea.innerHTML);
+				console.log(clanek.value);
+			}
+			dumpec();
+		</script>
+	{/block}
 {/block}
 
